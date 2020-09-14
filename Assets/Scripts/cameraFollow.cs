@@ -23,7 +23,7 @@ public class cameraFollow : MonoBehaviour
     void FixedUpdate()
     {
         pos.x = player.position.x;
-        pos.y = player.position.y;
+        pos.y = player.position.y + (0.3f*(Mathf.Abs(rb.velocity.magnitude) * zOffset + minimumOffset));
         //pos.z = -Mathf.Abs(rb.velocity.x + 1) * zOffset;
         pos.z = 10f;
         transform.position = pos;

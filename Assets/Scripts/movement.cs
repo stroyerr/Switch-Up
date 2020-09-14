@@ -28,14 +28,12 @@ public class movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(jumping);
         horzMove = horizontalAxis * horizontalSpeed;
         rb.AddForce(horzMove, 0, 0);
         rb.AddForce(Vector3.up * jumping);
-        Debug.Log((horzMove, jumping, 0));
         jumping = 0f;
     }
-
+    //Ground check script credit: https://www.reddit.com/r/Unity3D/comments/3c43ua/best_way_to_check_for_ground/
     bool GroundCheck()
     {
         RaycastHit hit;
