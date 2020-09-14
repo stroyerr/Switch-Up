@@ -15,15 +15,15 @@ public class movement : MonoBehaviour
     void Update()
     {
         horizontalAxis = Input.GetAxis("Horizontal");
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && GroundCheck())
         {
             jumping = jumpSpeed;
         }
 
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            jumping = 0f;
-        }
+        //if (Input.GetKeyUp(KeyCode.Space))
+        //{
+        //    jumping = 0f;
+        //}
     }
 
     private void FixedUpdate()
@@ -31,7 +31,24 @@ public class movement : MonoBehaviour
         Debug.Log(jumping);
         horzMove = horizontalAxis * horizontalSpeed;
         rb.AddForce(horzMove, 0, 0);
-        rb.AddForce(0, 20, 0);
+        rb.AddForce(Vector3.up * jumping);
         Debug.Log((horzMove, jumping, 0));
+        jumping = 0f;
+    }
+
+    bool GroundCheck()
+    {
+        RaycastHit hit;
+        float distance = 1f;
+        Vector3 dir = new Vector3(0, -1);
+
+        if (Physics.Raycast(transform.position, dir, out hit, distance))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
