@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{7C5BB212-8256-753D-5945-8E871810445A}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Materials/sphere.shader">
+    <Files>
+      <File FileName="Assets/movement.cs" Line="21" Column="25" />
+      <File FileName="Assets/cameraFollow.cs" Line="28" Column="21" />
+      <File FileName="Assets/Materials/sphere.shader" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Switch Up" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Materials" expanded="True">
+                <Node name="sphere.shader" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="40b139bf-b403-44a8-b882-1e69b22c4385" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
