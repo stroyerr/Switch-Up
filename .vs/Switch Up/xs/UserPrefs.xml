@@ -1,17 +1,19 @@
 ﻿<Properties StartupConfiguration="{7C5BB212-8256-753D-5945-8E871810445A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Materials/sphere.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SkySphere_V1/Documentation/How to use.txt">
     <Files>
-      <File FileName="Assets/movement.cs" Line="21" Column="25" />
-      <File FileName="Assets/cameraFollow.cs" Line="28" Column="21" />
-      <File FileName="Assets/Materials/sphere.shader" Line="1" Column="1" />
+      <File FileName="Assets/movement.cs" Line="38" Column="39" />
+      <File FileName="Assets/cameraFollow.cs" Line="30" Column="72" />
+      <File FileName="Assets/SkySphere_V1/Documentation/How to use.txt" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Switch Up" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Materials" expanded="True">
-                <Node name="sphere.shader" selected="True" />
+              <Node name="SkySphere_V1" expanded="True">
+                <Node name="Documentation" expanded="True">
+                  <Node name="How to use.txt" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
