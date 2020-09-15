@@ -30,27 +30,9 @@ public class movement : MonoBehaviour
             jumping = jumpSpeed;
         }        
       
-        if (updater.GetComponent<themeController>().theme == 1)
-        {
-            horzMove = fireMultiplier * horizontalAxis * horizontalSpeed;
-        }
-        else
-        {
-             horzMove = horizontalAxis * horizontalSpeed;
-        }
-        //if (Input.GetKeyUp(KeyCode.Space))
-        //{
-        //    jumping = 0f;
-        //}
+       
 
-        if (updater.GetComponent<themeController>().theme == 2)
-        {
-            lowGravity = true;
-        }
-        else
-        {
-            lowGravity = false;
-        }
+        
     }
 
     private void lowGrav(bool input)
@@ -67,6 +49,29 @@ public class movement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (updater.GetComponent<themeController>().theme == 2)
+        {
+            lowGravity = true;
+        }
+        else
+        {
+            lowGravity = false;
+        }
+
+        if (updater.GetComponent<themeController>().theme == 1)
+        {
+            horzMove = fireMultiplier * horizontalAxis * horizontalSpeed;
+        }
+        else
+        {
+             horzMove = horizontalAxis * horizontalSpeed;
+        }
+        //if (Input.GetKeyUp(KeyCode.Space))
+        //{
+        //    jumping = 0f;
+        //}
+
+
         if (lowGravity)
         {
             if (lowGravity != lGrav)

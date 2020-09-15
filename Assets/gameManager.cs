@@ -5,6 +5,9 @@ using UnityEngine;
 public class gameManager : MonoBehaviour
 {
 
+    public GameObject player;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +20,13 @@ public class gameManager : MonoBehaviour
         {
             reloadLevel();
         }
+
+        if (player.transform.position.y < -10)
+        {
+            reloadLevel();
+        }
+
+     
     }
 
     public void reloadLevel()

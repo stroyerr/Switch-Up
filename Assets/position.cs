@@ -22,9 +22,9 @@ public class position : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 pos;
-        pos.x = (player.transform.position.x + ((player.GetComponent<Rigidbody>().velocity.x / Mathf.Abs(player.GetComponent<Rigidbody>().velocity.x)) * 2));
+        pos.x = (player.transform.position.x + ((player.GetComponent<Rigidbody>().velocity.x / Mathf.Abs(player.GetComponent<Rigidbody>().velocity.x)) * 5));
         pos.y = player.transform.position.y;
-        pos.z = -10;
+        pos.z = 30;
         transform.position = pos;
         Debug.Log(pos);
         

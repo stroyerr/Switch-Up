@@ -22,6 +22,7 @@ public class themeController : MonoBehaviour
     public Material p1;
     public Material p2;
     public Material p3;
+    public GameObject UI;
    
 
     // Start is called before the first frame update
@@ -33,11 +34,6 @@ public class themeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    }
-
-    private void FixedUpdate()
-    {
-
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             theme = 0;
@@ -57,6 +53,12 @@ public class themeController : MonoBehaviour
         {
             theme = 3;
         }
+    }
+
+    private void FixedUpdate()
+    {
+
+        
 
         if (theme != newIndex)
         {
@@ -74,24 +76,28 @@ public class themeController : MonoBehaviour
         {
             RenderSettings.skybox = mat0;
             player.GetComponent<MeshRenderer>().material = p0;
+            UI.GetComponent<show>().Hide();
         }
 
         if (theme == 1)
         {
             RenderSettings.skybox = mat1;
             player.GetComponent<MeshRenderer>().material = p1;
+            UI.GetComponent<show>().Hide();
         }
 
         if (theme == 2)
         {
             RenderSettings.skybox = mat2;
             player.GetComponent<MeshRenderer>().material = p2;
+            UI.GetComponent<show>().Hide();
         }
 
         if (theme == 3)
         {
             RenderSettings.skybox = mat3;
             player.GetComponent<MeshRenderer>().material = p3;
+            UI.GetComponent<show>().Show();
         }
     }
 }
