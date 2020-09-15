@@ -1,18 +1,20 @@
 ﻿<Properties StartupConfiguration="{7C5BB212-8256-753D-5945-8E871810445A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/movement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/position.cs">
     <Files>
-      <File FileName="Assets/Scripts/themeController.cs" Line="95" Column="62" />
-      <File FileName="Assets/Scripts/movement.cs" Line="62" Column="16" />
+      <File FileName="Assets/Scripts/themeController.cs" Line="35" Column="6" />
+      <File FileName="Assets/Scripts/movement.cs" Line="22" Column="43" />
       <File FileName="Assets/Scripts/cameraFollow.cs" Line="1" Column="1" />
+      <File FileName="Assets/gameManager.cs" Line="25" Column="5" />
+      <File FileName="Assets/uiController.cs" Line="20" Column="122" />
+      <File FileName="Assets/position.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Switch Up" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="movement.cs" selected="True" />
-              </Node>
+              <Node name="Scripts" expanded="True" />
+              <Node name="position.cs" selected="True" />
             </Node>
           </Node>
         </State>

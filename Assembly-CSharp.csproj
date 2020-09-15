@@ -63,9 +63,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\gameManager.cs" />
+    <Compile Include="Assets\position.cs" />
     <Compile Include="Assets\Scripts\cameraFollow.cs" />
     <Compile Include="Assets\Scripts\movement.cs" />
     <Compile Include="Assets\Scripts\themeController.cs" />
+    <Compile Include="Assets\Scripts\uiController.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/angusoneill/Desktop/allfiles/School/!2021/Multimedia/Major Proj/UNITY/Switch Up/Switch Up/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

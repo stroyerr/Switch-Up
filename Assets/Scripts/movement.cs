@@ -14,29 +14,22 @@ public class movement : MonoBehaviour
     public GameObject updater;
     public float fireMultiplier = 2f;
     private int jumps = 0;
+    private bool lowGravity = false;
+    private bool lGrav = false;
+
+    void Stat()
+    {
+        Physics.gravity = new Vector3(0, -10, 0);
+    }
 
     void Update()
     {
         horizontalAxis = Input.GetAxis("Horizontal");
-        
-      
-
-        //if (Input.GetKeyUp(KeyCode.Space))
-        //{
-        //    jumping = 0f;
-        //}
-    }
-
-    private void FixedUpdate()
-    {
         if (Input.GetKeyDown(KeyCode.Space) && GroundCheck())
         {
             jumping = jumpSpeed;
-        }
-
-        rb.AddForce(Vector3.up * jumping);
-
-        
+        }        
+      
         if (updater.GetComponent<themeController>().theme == 1)
         {
             horzMove = fireMultiplier * horizontalAxis * horizontalSpeed;
@@ -45,6 +38,60 @@ public class movement : MonoBehaviour
         {
              horzMove = horizontalAxis * horizontalSpeed;
         }
+        //if (Input.GetKeyUp(KeyCode.Space))
+        //{
+        //    jumping = 0f;
+        //}
+
+        if (updater.GetComponent<themeController>().theme == 2)
+        {
+            lowGravity = true;
+        }
+        else
+        {
+            lowGravity = false;
+        }
+    }
+
+    private void lowGrav(bool input)
+    {
+        if (input)
+        {
+            Physics.gravity = new Vector3(0, -4, 0);
+        }
+        else
+        {
+            Physics.gravity = new Vector3(0, -10, 0);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (lowGravity)
+        {
+            if (lowGravity != lGrav)
+            {
+                lowGrav(true);
+                lGrav = true;
+            }
+        }
+        else
+        {
+            if (!lowGravity)
+            {
+                if(lowGravity != lGrav)
+                {
+                    lowGrav(false);
+                    lGrav = false;
+                }
+            }
+        }
+
+
+        rb.AddForce(Vector3.up * jumping);
+
+        
+
         rb.AddForce(horzMove, 0, 0);
         
         jumping = 0f;
@@ -58,35 +105,36 @@ public class movement : MonoBehaviour
         float distance = 1f;
         Vector3 dir = new Vector3(0, -1);
 
+
         if (updater.GetComponent<themeController>().theme == 0)
         {
-             if (Physics.Raycast(transform.position, dir, out hit, distance))
-                    {
-                        if (jumps < 2)
+            if (jumps < 1)
+            {
+                jumps += 1;
+                return true;
+            }
+            else
+            {
+                if (Physics.Raycast(transform.position, dir, out hit, distance))
                 {
+                    jumps = 0;
                     return true;
                 }
-                else
-                {
-                    jumps += 1;
-                    return true;
-                }
-                    } else
-                    {
-                        return false;
-                    }
+                    return false;
+            }
         }
         else
         {
             if (Physics.Raycast(transform.position, dir, out hit, distance))
-                    {
-                        return true;
-                    } else
-                    {
-                        return false;
-                    }
+            {
+                jumps = 0;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        
     }
 }
