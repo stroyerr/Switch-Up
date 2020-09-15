@@ -245,7 +245,7 @@ MonoBehaviour:
   player: {fileID: 1492666738}
   playerObject: {fileID: 1492666733}
   zOffset: 0.35
-  minimumOffset: 10
+  minimumOffset: 8.5
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -426,6 +426,7 @@ MonoBehaviour:
   rb: {fileID: 1492666734}
   horizontalSpeed: 30
   jumpSpeed: 500
+  updater: {fileID: 1878819242}
 --- !u!1 &1701097196
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,6 +568,7 @@ MonoBehaviour:
   mat1: {fileID: 2100000, guid: ce9ff95dd43fe42dcbe966c38020937d, type: 2}
   mat2: {fileID: 2100000, guid: a895ece0878a00c4b9ec45b99fe204a6, type: 2}
   mat3: {fileID: 2100000, guid: 0de03475c512b494d979e14398c0325d, type: 2}
+  theme: 0
 --- !u!4 &1878819244
 Transform:
   m_ObjectHideFlags: 0

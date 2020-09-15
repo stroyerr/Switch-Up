@@ -65,7 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\cameraFollow.cs" />
     <Compile Include="Assets\Scripts\movement.cs" />
-    <Compile Include="Assets\themeController.cs" />
+    <Compile Include="Assets\Scripts\themeController.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/angusoneill/Desktop/allfiles/School/!2021/Multimedia/Major Proj/UNITY/Switch Up/Switch Up/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

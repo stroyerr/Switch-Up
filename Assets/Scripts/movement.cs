@@ -11,14 +11,15 @@ public class movement : MonoBehaviour
     private float horzMove = 0f;
     public float jumpSpeed = 20f;
     private float jumping = 0f;
+    public GameObject updater;
+    public float fireMultiplier = 2f;
+    private int jumps = 0;
 
     void Update()
     {
         horizontalAxis = Input.GetAxis("Horizontal");
-        if (Input.GetKeyDown(KeyCode.Space) && GroundCheck())
-        {
-            jumping = jumpSpeed;
-        }
+        
+      
 
         //if (Input.GetKeyUp(KeyCode.Space))
         //{
@@ -28,10 +29,27 @@ public class movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        horzMove = horizontalAxis * horizontalSpeed;
-        rb.AddForce(horzMove, 0, 0);
+        if (Input.GetKeyDown(KeyCode.Space) && GroundCheck())
+        {
+            jumping = jumpSpeed;
+        }
+
         rb.AddForce(Vector3.up * jumping);
+
+        
+        if (updater.GetComponent<themeController>().theme == 1)
+        {
+            horzMove = fireMultiplier * horizontalAxis * horizontalSpeed;
+        }
+        else
+        {
+             horzMove = horizontalAxis * horizontalSpeed;
+        }
+        rb.AddForce(horzMove, 0, 0);
+        
         jumping = 0f;
+
+       
     }
     //Ground check script credit: https://www.reddit.com/r/Unity3D/comments/3c43ua/best_way_to_check_for_ground/
     bool GroundCheck()
@@ -40,13 +58,35 @@ public class movement : MonoBehaviour
         float distance = 1f;
         Vector3 dir = new Vector3(0, -1);
 
-        if (Physics.Raycast(transform.position, dir, out hit, distance))
+        if (updater.GetComponent<themeController>().theme == 0)
         {
-            return true;
+             if (Physics.Raycast(transform.position, dir, out hit, distance))
+                    {
+                        if (jumps < 2)
+                {
+                    return true;
+                }
+                else
+                {
+                    jumps += 1;
+                    return true;
+                }
+                    } else
+                    {
+                        return false;
+                    }
         }
         else
         {
-            return false;
+            if (Physics.Raycast(transform.position, dir, out hit, distance))
+                    {
+                        return true;
+                    } else
+                    {
+                        return false;
+                    }
         }
+
+        
     }
 }
