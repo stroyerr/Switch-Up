@@ -15,6 +15,7 @@ public class themeController : MonoBehaviour
     public Material mat1;
     public Material mat2;
     public Material mat3;
+    public Material mat4;
     public int theme = 0;
     private int newIndex = 1;
     public GameObject player;
@@ -22,6 +23,7 @@ public class themeController : MonoBehaviour
     public Material p1;
     public Material p2;
     public Material p3;
+    public Material p4;
     public GameObject UI;
    
 
@@ -97,6 +99,23 @@ public class themeController : MonoBehaviour
         {
             RenderSettings.skybox = mat3;
             player.GetComponent<MeshRenderer>().material = p3;
+            UI.GetComponent<show>().Show();
+        }
+
+        if (theme == 4)
+        {
+            RenderSettings.skybox = mat3;
+            player.GetComponent<MeshRenderer>().material = p3;
+            UI.GetComponent<show>().Show();
+        }
+    }
+
+    public void setTheme(int theme)
+    {
+        if (theme == 4)
+        {
+            RenderSettings.skybox = mat4;
+           // player.GetComponent<MeshRenderer>().material = p4;
             UI.GetComponent<show>().Show();
         }
     }

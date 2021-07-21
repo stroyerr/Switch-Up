@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - die
+  - finish
+  - bullet
+  - zone
+  - lava
+  - checkpoint
   layers:
   - Default
   - TransparentFX

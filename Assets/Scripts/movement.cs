@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class movement : MonoBehaviour
 {
@@ -16,10 +17,88 @@ public class movement : MonoBehaviour
     private int jumps = 0;
     private bool lowGravity = false;
     private bool lGrav = false;
+    private int currentScene;
+    private Vector3 spawnPoint;
+    private bool usingCheckpoint = false;
+  
 
     void Stat()
     {
         Physics.gravity = new Vector3(0, -10, 0);
+    }
+
+    private void Start()
+    {
+        currentScene = SceneManager.GetActiveScene().buildIndex;
+    }
+
+    //void OnCollisionEnter(Collision col)
+    //{
+    //    Debug.Log("collision");
+    //    if (col.gameObject.tag == "die")
+    //    {
+    //        Application.LoadLevel(Application.loadedLevel);
+    //        Physics.gravity = new Vector3(0, -10, 0);
+    //        Debug.Log("hit");
+    //    }
+    //}
+
+    void OnTriggerEnter(Collider col)
+    {
+        Debug.Log("collision");
+        if (col.gameObject.tag == "die")
+        {
+            restart();
+        }
+
+        if(col.gameObject.tag == "zone")
+        {
+            restart();
+        }
+
+        if (col.gameObject.tag=="finish"){
+            Debug.Log("finished");
+            Debug.Log(currentScene + " " + currentScene + 1);
+            SceneManager.LoadScene(currentScene + 1);
+        }
+
+        if (col.gameObject.tag == "lava")
+        {
+            if(updater.GetComponent<themeController>().theme == 3)
+            {
+                return;
+            }
+            else
+            {
+                restart();
+            }
+            
+        }
+
+        if (col.gameObject.tag == "checkpoint")
+        {
+            spawnPoint = col.transform.position;
+            usingCheckpoint = true;
+            Debug.Log("cp");
+        }
+
+
+    }
+
+    void restart()
+    {
+        if (usingCheckpoint)
+        {
+            transform.position = spawnPoint;
+            updater.GetComponent<themeController>().theme = 0;
+            rb.velocity = new Vector3(0, 0, 0);
+            Physics.gravity = new Vector3(0, -10, 0);
+        }
+        else
+        {
+            Application.LoadLevel(Application.loadedLevel);
+            Physics.gravity = new Vector3(0, -10, 0);
+        }
     }
 
     void Update()
@@ -28,11 +107,20 @@ public class movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && GroundCheck())
         {
             jumping = jumpSpeed;
-        }        
-      
-       
+           
+        }
 
-        
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            restart();
+            Debug.Log("restart " + usingCheckpoint);
+        }
+
+        if (transform.position.y < -10)
+        {
+            restart();
+        }
+
     }
 
     private void lowGrav(bool input)
@@ -142,4 +230,6 @@ public class movement : MonoBehaviour
         }
 
     }
+
+   
 }
