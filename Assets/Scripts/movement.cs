@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class movement : MonoBehaviour
 {
-
+                                                                                                                                                          
+    private GameObject spike;
     public Rigidbody rb;
     public float horizontalSpeed = 50f;
     private float horizontalAxis = 0f;
@@ -20,11 +21,13 @@ public class movement : MonoBehaviour
     private int currentScene;
     private Vector3 spawnPoint;
     private bool usingCheckpoint = false;
+    public bool alive;
   
 
     void Stat()
     {
         Physics.gravity = new Vector3(0, -10, 0);
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
     }
 
     private void Start()
@@ -45,9 +48,13 @@ public class movement : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
+        spike = col.gameObject;
+        //alive = col.gameObject.GetComponent<properties>().alive;
+
         Debug.Log("collision");
         if (col.gameObject.tag == "die")
         {
+            Debug.Log(col.gameObject.tag + " ");
             restart();
         }
 
@@ -59,6 +66,7 @@ public class movement : MonoBehaviour
         if (col.gameObject.tag=="finish"){
             Debug.Log("finished");
             Debug.Log(currentScene + " " + currentScene + 1);
+            audioController.completeTrue = true;
             SceneManager.LoadScene(currentScene + 1);
         }
 
@@ -77,6 +85,8 @@ public class movement : MonoBehaviour
 
         if (col.gameObject.tag == "checkpoint")
         {
+            checkPointReached.notifyUser();
+            audioController.checkpointTrue = true;
             spawnPoint = col.transform.position;
             usingCheckpoint = true;
             Debug.Log("cp");
@@ -93,11 +103,13 @@ public class movement : MonoBehaviour
             updater.GetComponent<themeController>().theme = 0;
             rb.velocity = new Vector3(0, 0, 0);
             Physics.gravity = new Vector3(0, -10, 0);
+            audioController.deathTrue = true;
         }
         else
         {
             Application.LoadLevel(Application.loadedLevel);
             Physics.gravity = new Vector3(0, -10, 0);
+            audioController.deathTrue = true;
         }
     }
 
@@ -107,6 +119,7 @@ public class movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && GroundCheck())
         {
             jumping = jumpSpeed;
+            audioController.jumpTrue = true;
            
         }
 

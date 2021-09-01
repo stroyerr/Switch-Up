@@ -23,4 +23,9 @@ public class buttonManager : MonoBehaviour
         SceneManager.LoadScene(next);
         Debug.Log("loading scene " + next);
     }
+
+    public void quitGame()
+    {
+        Application.Quit();
+    }
 }

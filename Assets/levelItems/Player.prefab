@@ -129,6 +129,7 @@ MonoBehaviour:
   jumpSpeed: 300
   updater: {fileID: 0}
   fireMultiplier: 1.7
+  alive: 0
 --- !u!114 &4033506174107143556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4033506174107143582}
-  barrel: {fileID: 0}
+  barrel: {fileID: 4033506174107143581}
   bullet: {fileID: 7339392237059288900, guid: 5e325adecfee146d9a785c36ae4ba33c, type: 3}
   updater: {fileID: 0}
   bulletSpeed: 30

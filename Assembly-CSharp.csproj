@@ -64,21 +64,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DEBUG.cs" />
+    <Compile Include="Assets\MusicClass.cs" />
+    <Compile Include="Assets\MusicScript.cs" />
     <Compile Include="Assets\Scripts\barrelLocation.cs" />
     <Compile Include="Assets\Scripts\cameraFollow.cs" />
     <Compile Include="Assets\Scripts\collision.cs" />
     <Compile Include="Assets\Scripts\debug.cs" />
+    <Compile Include="Assets\Scripts\introLevel.cs" />
+    <Compile Include="Assets\Scripts\logowobble.cs" />
     <Compile Include="Assets\Scripts\movement.cs" />
+    <Compile Include="Assets\Scripts\popUpMessage.cs" />
     <Compile Include="Assets\Scripts\position.cs" />
+    <Compile Include="Assets\Scripts\properties.cs" />
     <Compile Include="Assets\Scripts\shoot.cs" />
     <Compile Include="Assets\Scripts\show.cs" />
+    <Compile Include="Assets\Scripts\spikeBounce.cs" />
+    <Compile Include="Assets\Scripts\spikesMovement.cs" />
+    <Compile Include="Assets\Scripts\tempColor.cs" />
+    <Compile Include="Assets\Scripts\tempVisual.cs" />
     <Compile Include="Assets\Scripts\temperature.cs" />
+    <Compile Include="Assets\Scripts\testscript.cs" />
     <Compile Include="Assets\Scripts\themeController.cs" />
     <Compile Include="Assets\Scripts\uiController.cs" />
+    <Compile Include="Assets\Scripts\zoneMove.cs" />
     <Compile Include="Assets\Scripts\zoom.cs" />
+    <Compile Include="Assets\audioController.cs" />
     <Compile Include="Assets\backgroundscroll.cs" />
     <Compile Include="Assets\buttonManager.cs" />
     <Compile Include="Assets\checkPoint.cs" />
+    <Compile Include="Assets\checkPointReached.cs" />
     <Compile Include="Assets\customTag.cs" />
     <Compile Include="Assets\destroy.cs" />
     <Compile Include="Assets\dialogue.cs" />
@@ -86,13 +101,7 @@
     <Compile Include="Assets\dialogueTrigger.cs" />
     <Compile Include="Assets\gameManager.cs" />
     <Compile Include="Assets\gameOver.cs" />
-    <Compile Include="Assets\introLevel.cs" />
-    <Compile Include="Assets\logowobble.cs" />
-    <Compile Include="Assets\spikeBounce.cs" />
-    <Compile Include="Assets\spikesMovement.cs" />
-    <Compile Include="Assets\tempVisual.cs" />
-    <Compile Include="Assets\testscript.cs" />
-    <Compile Include="Assets\zoneMove.cs" />
+    <Compile Include="Assets\setPosition.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />

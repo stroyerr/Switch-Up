@@ -11,7 +11,7 @@ public class debug : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //popUpMessage message = popUpMessage.newMessage("test");
     }
 
     // Update is called once per frame

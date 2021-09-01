@@ -1,22 +1,33 @@
 ﻿<Properties StartupConfiguration="{7C5BB212-8256-753D-5945-8E871810445A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/buttonManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/shoot.cs">
     <Files>
-      <File FileName="Assets/logowobble.cs" Line="27" Column="1" />
-      <File FileName="Assets/spikeBounce.cs" />
-      <File FileName="Assets/Scripts/movement.cs" />
-      <File FileName="Assets/Scripts/themeController.cs" />
-      <File FileName="Assets/Scripts/temperature.cs" />
-      <File FileName="Assets/gameManager.cs" Line="13" Column="1" />
-      <File FileName="Assets/testscript.cs" />
-      <File FileName="Assets/backgroundscroll.cs" Line="19" Column="38" />
-      <File FileName="Assets/buttonManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/checkPoint.cs" Line="1" Column="1" />
+      <File FileName="Assets/DEBUG.cs" Line="19" Column="41" />
+      <File FileName="Assets/checkPointReached.cs" Line="28" Column="68" />
+      <File FileName="Assets/tempColor.cs" Line="14" Column="11" />
+      <File FileName="Assets/Scripts/temperature.cs" Line="19" Column="34" />
+      <File FileName="Assets/Scripts/uiController.cs" Line="6" Column="14" />
+      <File FileName="Assets/Scripts/movement.cs" Line="69" Column="49" />
+      <File FileName="Assets/Scripts/zoneMove.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/collision.cs" Line="33" Column="68" />
+      <File FileName="Assets/Scripts/themeController.cs" Line="70" Column="47" />
+      <File FileName="Assets/Scripts/spikeBounce.cs" Line="23" Column="113" />
+      <File FileName="Assets/setPosition.cs" Line="51" Column="95" />
+      <File FileName="Assets/Scripts/properties.cs" Line="23" Column="19" />
+      <File FileName="Assets/buttonManager.cs" Line="29" Column="28" />
+      <File FileName="Assets/MusicScript.cs" Line="22" Column="6" />
+      <File FileName="Assets/MusicClass.cs" Line="5" Column="38" />
+      <File FileName="Assets/audioController.cs" Line="65" Column="23" />
+      <File FileName="Assets/Scripts/shoot.cs" Line="21" Column="38" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Switch Up" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="buttonManager.cs" selected="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="shoot.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -25,7 +36,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="96367b2f-68c2-496c-8653-505393a2ddd2" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b28f5a49-20bc-41c0-8c49-bc0382200668" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

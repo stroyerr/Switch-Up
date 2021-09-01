@@ -55,6 +55,8 @@ public class themeController : MonoBehaviour
         {
             theme = 3;
         }
+
+        setPosition.theme = theme + 1;
     }
 
     private void FixedUpdate()
@@ -65,6 +67,7 @@ public class themeController : MonoBehaviour
         if (theme != newIndex)
         {
             changeTheme();
+            audioController.switchTrue = true;
         }
 
 

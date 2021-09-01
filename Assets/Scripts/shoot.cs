@@ -31,6 +31,7 @@ public class shoot : MonoBehaviour
         if (fire)
         {
             Shoot();
+           
         }
     }
 
@@ -47,6 +48,7 @@ public class shoot : MonoBehaviour
             bulletVelocity.z = 0;
             clone = (GameObject) Instantiate(bullet, barrel.transform.position, Quaternion.identity);
             clone.GetComponent<Rigidbody>().velocity = bulletVelocity;
+            audioController.bulletTrue = true;
             //Instantiate(bullet, barrel.transform.position, Quaternion.identity);
         }
       

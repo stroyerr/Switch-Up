@@ -24,9 +24,6 @@ public class temperature : MonoBehaviour
         theme = updater.GetComponent<themeController>().theme;
 
         //Display via indicator
-        indHeight = initial.y + temp;
-         RectTransform indicatorTransform = indicator.GetComponent<RectTransform>();
-        indicator.transform.position = new Vector3(0, indHeight, 0);
 
         //Debug.Log(indHeight);
     }
@@ -71,4 +68,5 @@ public class temperature : MonoBehaviour
             }
         }
     }
+
 }

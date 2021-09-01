@@ -30,7 +30,7 @@ public class collision : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        if (col.tag == "die")
+        if (col.tag == "die" && (!col.gameObject.name.Equals("zone")))
         {
             Destroy(col.gameObject);
         }

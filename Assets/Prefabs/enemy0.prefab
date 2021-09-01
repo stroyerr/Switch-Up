@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5078986829234096376}
   - component: {fileID: 5078986829234096375}
   - component: {fileID: 5078986829234096379}
+  - component: {fileID: 8446982223268875549}
   m_Layer: 0
   m_Name: enemy0
   m_TagString: die
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5078986829234096374}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 14.94, y: -2.47, z: 17}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 30}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -108,3 +109,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2.7
   offset: -2.6
+  initialZ: 17
+--- !u!114 &8446982223268875549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5078986829234096374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df67e3b6a54404d29836f975af8e048d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alive: 0
+  thisObj: {fileID: 5078986829234096374}
+  xFlat: 1
+  yFlat: 1
+  initialZ: 30
